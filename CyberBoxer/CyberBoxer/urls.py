@@ -20,5 +20,6 @@ from testapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', views.List_view.as_view()),
+    path('detail/<int:pk>/', views.Detail_view.as_view()),
 
 ]
