@@ -1,0 +1,13 @@
+<!--login page-->
+{%extends "testapp/base.html"%}
+{%block content%}
+{% load crispy_forms_tags %}
+<h3>Login form</h3>
+<form class=""method="post">
+  {{form|crispy}}
+  {%csrf_token%}
+  <br>
+  <input type="submit" name="" value="Login">
+
+</form>
+{%endblock content%}

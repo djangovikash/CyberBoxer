@@ -1,19 +1,21 @@
 <!--list.html-->
 {%extends 'testapp/base.html'%}
 {%block content%}
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 <div class="jumbotron">
   <div class="container">
-<h4>List of ITEMS</h4>
-<table>
+<h1>List of ITEMS</h1>
+<br>
+<table class="fixed">
+  <col width="200px" />
   <thead>
-    <th>Name</th>
-    <th>Quantity</th>
+    <th><h4>Name</h4></th>
+    <th><h4>Quantity</h4></th>
   </thead>
 {%for list in Item_list%}
 <tr>
-  <td><a href="/detail/{{list.id}}">{{list.name}}</a></td>
-  <td>{{list.quantity}}</td>
+  <td><a href="/detail/{{list.id}}"><h4>{{list.name|upper}}</h4></a></td>
+  <td><h4>{{list.quantity}}</h4></td>
 </tr>
 {%endfor%}
 </table>

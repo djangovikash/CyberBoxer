@@ -6,9 +6,12 @@
   <div class="container">
 
 <h1>DETAIL VIEW</h1>
-<h1>Name of the product:--{{object.name}}</h1>
-<h1>Quantity:--{{object.quantity}}</h1>
-<h1>Image of the product:--{{object.imag}}</h1>
+<p>
+<h1>Name of the product:{{object.name}}</h1>
+<h1>Quantity:{{object.quantity}}</h1>
+<h1>Image of the product:</h1><img src="{{object.imag.url}}" alt="not found">
+
+<a class="btn btn-primary" href="/home" role="button">List Of Item</a>
 </div>
 </div>
 {%endblock content%}

@@ -1,15 +1,10 @@
 <!--registration.html-->
-<form class="" method="post" action="www.google.com">
-  <label for="username"></label>
-  <input id="username" type="text" name=""  value="">
-  <label for="email"></label>
-  <input  id="email" type="email" name="" value="">
-  <label for="phone"></label>
-  <input id="phone" type="text" name="" value="">
-  <label for="pwd"></label>
-  <input id="pwd" type="password" name="" value="">
-  <label for="fname"></label>
-  <input id="fname" type="text" name="" value="">
-  <input type="submit" name="" placeholder="submit">
-
+{%extends "testapp/base.html"%}
+{%block content %}
+{%load crispy_forms_tags%}
+<form class=""  method="post">
+  {{form|crispy}}
+  {%csrf_token%}
+  <input class="btn btn-primary" type="submit" name="" value="SignUp">
 </form>
+{%endblock content%}

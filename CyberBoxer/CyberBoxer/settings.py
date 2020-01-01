@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'crispy_forms',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -85,7 +86,8 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
-
+LOGIN_REDIRECT_URL="home"
+LOGOUT_REDIRECT_URL="logout"
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -123,3 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
 STATIC_DIR
 ]
+MEDIA_DIR=os.path.join(BASE_DIR,'media')
+MEDIA_ROOT=MEDIA_DIR
+MEDIA_URL="/media/"
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
